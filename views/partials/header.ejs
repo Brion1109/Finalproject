@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OH Herbs Shop</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<script src="https://kit.fontawesome.com/f0bb2fa622.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light"   style="border-bottom:  solid rgb(129, 126, 126);"  >
+		<div class="container-fluid" >
+		  &emsp;
+		  <a href="/"> <img src="/images/ohlogo.jpg" id="logo" width="120" height="50"  ></a>
+		  &emsp;
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link " aria-current="page" href="/" style="font-size: 20px;">HOME</a>
+			  </li>&emsp;
+			  <li class="nav-item">
+				<a class="nav-link" href="/news" style="font-size:20px;">NEWS</a>
+			  </li>&emsp;
+			  <li class="nav-item">
+				<a class="nav-link" href="/diet" style="font-size:20px;">DIET</a>
+			  </li>&emsp;
+			  <li class="nav-item dropdown">
+				<li class="nav-item">
+				  <a class="nav-link" href="/herbs" style="font-size: 20px;">HERBS</a>
+			  </li>&emsp;
+			  <li class="nav-item">
+				<a class="nav-link" href="/healtbeuty" style="font-size: 20px;">HEALTBEAUTY</a>
+			  </li>&emsp;
+			  <li class="nav-item">
+				<a class="nav-link" href="/products" style="font-size: 20px;">SHOP</a>
+			  </li>&emsp;
+				<li class="nav-item active">
+				</li>
+				<% if(currentUser && currentUser.username=='admin') { %>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: rgb(237, 12, 12); font-size:20px; ">
+					  MANAGE
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="nav-link"   style="color: rgb(237, 12, 12);font-size: 15px"   href="/products/new">Add Product<span class="sr-only">(current)</span></a>
+						<a class="nav-link"   style="color: rgb(237, 12, 12);font-size: 15px"   href="/dashorder">Check Orders<span class="sr-only">(current)</span></a>
+					</div>
+				  </li>
+				  <% } %>
+				  
+			  </li>
+			</ul>
+		  </div>
+		  <ul class="navbar-nav navbar-right">
+			<% if(!currentUser) { %>
+				<li class="nav-item active">
+					<a class="nav-link" font-size:20px;  href="/register">Sign Up <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+				  <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+				</li>
+			<% } else { %>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" style="font-size: 20px;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: rgb(14, 13, 13);" >
+					  Welcome <%= currentUser.username %>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item"  style="font-size: 15px;" href="/orders">My Orders</a>
+					  <a class="dropdown-item"  style="font-size: 15px;" href="/logout">Logout</a>
+					 
+					  
+					</div>
+				  </li>
+			<% } %>
+			<li class="nav-item active">
+				<a class="nav-link" href="/cart" style="font-size: 20px;" ><i class="fas fa-shopping-cart mr-2"></i>Cart<span class="sr-only">(current)</span></a>
+			</li>
+		</ul>
+		  </div>
+		  
+		  </div>
+		</div>
+	  </nav>
+	<div class="container">
+		<% if(success && success.length>0) { %>
+			<div class="alert alert-success mt-3">
+				<%= success %>
+			</div>
+		<% } %>
+		
+		<% if(error && error.length>0) { %>
+			<div class="alert alert-danger mt-3">
+				<%= error %>
+			</div>
+		<% } %>
+	</div>

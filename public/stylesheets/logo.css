@@ -1,0 +1,26 @@
+#mylogo{
+  content:url("../images/oh.png") ;
+    border-style:none;
+    max-width: 100;
+    max-height: 100;
+    background-repeat : no-repeat;
+      height: auto;
+  }
+  #logo{
+    content:url("../images/oh.png") ;
+      border-style:none;
+      max-width: 100;
+      max-height: 100;
+      background-repeat : no-repeat;
+        height: auto;
+    }
+
+    #logo{
+      content:url("../images/111.png") ;
+        border-style:none;
+        max-width: 100;
+        max-height: 100;
+        background-repeat : no-repeat;
+          height: auto;
+      }
+    

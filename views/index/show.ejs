@@ -1,0 +1,10 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+	<div class="jumbotron my-4 my-lg-5">
+		<h3>Welcome to Users Profile</h3>
+	</div>
+    <% if(users){ %>
+
+<a class href="/user/<%= users._id %>" style=" color: rgb(239, 0, 0)";>EDIT</a>
+<% } %>

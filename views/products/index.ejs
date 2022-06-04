@@ -1,0 +1,310 @@
+<%- include("../partials/header") %>
+<!DOCTYPE html>
+<!-- Basic -->
+
+<head>
+    
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style> 
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+        
+        input[type=text]:focus {
+            width: 100%;
+        }
+        </style>
+
+</head>
+
+
+    
+    <!-- Start Slider -->
+    <div id="slides-shop" class="cover-slides">
+        <ul class="slides-container">
+            <li class="text-center">
+                <img src="images/banner-01.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br>OH Herbs Shop</strong></h1>
+                            <p class="m-b-40">ค้นหาสินค้าOTOPที่คุณต้องการได้ที่นี่<br>หากต้องการค้นหาข้อมูลสมุนไพรต่างๆคลิกด้านล่างเพื่อกลับไปยังHome</p>
+                            <p><a class="btn hvr-hover" href="/">Home</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="images/banner-02.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br>OH Herbs Shop</strong></h1>
+                            <p class="m-b-40">ค้นหาสินค้าOTOPที่คุณต้องการได้ที่นี่<br>หากต้องการค้นหาข้อมูลสมุนไพรต่างๆคลิกด้านล่างเพื่อกลับไปยังHome</p>
+                            <p><a class="btn hvr-hover" href="/">Home</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="images/banner-03.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br>OH Herbs Shop</strong></h1>
+                            <p class="m-b-40">ค้นหาสินค้าOTOPที่คุณต้องการได้ที่นี่<br>หากต้องการค้นหาข้อมูลสมุนไพรต่างๆคลิกด้านล่างเพื่อกลับไปยังHome</p>
+                            <p><a class="btn hvr-hover" href="/">Home</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slides-navigation">
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <!-- End Slider -->
+
+    <!-- Start Categories  -->
+    
+    <!-- End Categories -->
+
+    <!-- Start Products  -->
+    <div class="products-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>OH herbs Shop</h1>
+                        <p>สิ้นค้าOTOPมากมายให้คุณได้เลือกชมทีนี่!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="special-menu text-center">
+                        <div class="button-group filter-button-group">
+                            <button class="active" data-filter="*">All</button>
+                            <button data-filter=".top-featured">Top featured</button>
+                            <button data-filter=".best-seller">Best seller</button>
+                            <br>
+                            <br>
+                            <form action="/products" method="GET"  >
+                                <input type="text" name="search" placeholder="Search.." href="#prod">
+                              </form>
+                              
+                        </div>
+                        
+                
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        
+            <div class="row special-list" id="prod">
+                <% products.forEach(function(product){ %>
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                           
+                            <div class="type-lb">
+                                <%if (product.disc_perc) { %>
+                                <p class="sale">Sale</p>
+                                <% } %>
+                            </div>      
+                            <img src="<%= product.image %>" class="img-fluid" alt="Image" >
+                            <div class="mask-icon">
+                                <% if(currentUser && currentUser.cart.items.some(function(cartItem){ 
+                                    return cartItem.product._id.equals(product._id); 
+                                 })){ %>
+                                    <a class="cart" href="/cart"><br>Go to Cart</a>
+                                    <% } else { %>
+                                <a class="cart" href="/cart/new/<%= product._id %>/index"><br>Add to Cart</a>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <%if (product.stock_balance>=1) { %>
+                                <a style="color: rgb(10, 101, 2)">iNSTOCK-<%= product.stock_balance %></a>
+                                <% } else { %>
+                                <a style="color: red;">Out of Stock</a>
+                                <% } %>
+                            <a href="/products/<%= product._id %>"><h4><%= product.name.substring(0,50) %><% if(product.name.length>50) { %>&nbsp...<% } %></h4></a>
+                            <h5> ฿<%= product.price %></h5>
+                            <span class="nowrap">
+                                <span class="mrp mr-1"></span>
+                                <span class="disc">Save <%= product.disc_perc %>% off</span>
+                            </span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <% }); %>
+            </div>
+            
+        </div>
+    
+    </div>
+    <!-- End Products  -->
+
+    <!-- Start Blog  -->
+    
+    <!-- End Blog  -->
+
+
+    <!-- Start Instagram Feed  -->
+    <div class="instagram-box">
+        <div class="main-instagram owl-carousel owl-theme">
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-01.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-02.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-03.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-04.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-05.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-06.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-07.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-08.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-09.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/instagram-img-05.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Instagram Feed  -->
+
+
+    <!-- Start Footer  -->
+
+    <!-- End Footer  -->
+
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
+            <a href="https://html.design/">html design</a></p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/inewsticker.js"></script>
+    <script src="js/bootsnav.js."></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/baguetteBox.min.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

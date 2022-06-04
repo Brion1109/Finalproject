@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href='/stylesheets/logo.css' /> 
+  <link rel='stylesheet' href='/stylesheets/homestyle.css' />
+  </head>
+  <body>
+    <div align = 'right' style="background-color: black;">
+      &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="" style="font-size:15px;"><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
+      <a href="" style="font-size: 15px;"><i class="bi bi-instagram" style="color: rgb(255, 255, 255);"></i></a>&nbsp;&nbsp;
+      <a href="" style="font-size: 15px;"><i class="bi bi-telephone-fill" style="color: chartreuse;"></i></a><a style="color: blanchedalmond;">&nbsp;02-15487968</a>&nbsp;&nbsp;&nbsp;
+    
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom:  solid rgb(129, 126, 126);"  data-spy="affix">
+      <div class="container-fluid">
+        &emsp;
+        <a href="/"> <img src="/ohherbs/public/images/ohlogo.jpg" id="mylogo" width="120" height="50" ></a>
+        &emsp;
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="/" style="font-size: 15px;">HOME</a>
+            </li>&emsp;
+            <li class="nav-item">
+              <a class="nav-link" href="/diet" style="font-size:15px;">DIET</a>
+            </li>&emsp;
+            <li class="nav-item dropdown">
+              <li class="nav-item">
+                <a class="nav-link" href="/herbs" style="font-size: 15px;">HERBS</a>
+            </li>&emsp;
+            <li class="nav-item">
+              <a class="nav-link" href="/news" style="font-size: 15px;">NEWS</a>
+            </li>&emsp;
+            <li class="nav-item">
+              <a class="nav-link" href="/products" style="font-size: 15px;">SHOP</a>
+            </li>&emsp;
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"  style="font-size: 15px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTACT
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/contact">LOCATION</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#store">FOOTER</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="header_3">
+          <ul class="navbar-right">
+                <li> <a href=""><i class="bi bi-facebook"></i></a></li>
+              <li><a href="" ><i class="bi bi-instagram" ></i></a></li>
+              <li><a href="" ><i class="bi bi-telephone-fill" ></i></a></li>
+            </ul>
+         </div>
+        </div>
+        
+        </div>
+      </div>
+    </nav>
+  </section>
+  <% data.beautys.forEach(function(beautys){ %>
+  <section id="about">
+   <div class="container">
+    <div class="row">
+     <div class="col-sm-12">
+      <div class="about_main clearfix">
+     <div class="col-sm-4 padding_all">
+     <div class="about_1">
+      <h1 class="text-center">HEALTBEAUTY</h1>
+      <p><a href="#"><img src="<%= beautys.URL %>"></a></p>
+      <h3>ความสวยความงามคือ</h3>
+     </div>
+     <div class="about_2">
+        <p>ความสวยความงาม แบ่งเป็น “ความงาม” คือสถานภาพของสิ่งใดสิ่งหนึ่งที่ก่อให้เกิดความเพลิดเพลิน และความชื่นชมผ่านการเข้าใจและรับรู้ถึงความสมดุล สัดส่วน และ แรงดึงดูด ของสิ่งๆนั้น ซึ่งอาจจะเป็นบุคคล สัตว์ สิ่งของ เหตุการณ์ สถานที่ ดนตรี ศิลปะ หรือ ความคิด สิ่งตรงกันข้ามกับความงามคือความน่าเกลียดน่าชัง ซึ่งมีผลกระทบอย่างตรงกันข้ามต่อผู้ที่รับรู้ “ความสวย” ไม่มีกฎเกณฑ์ที่ตายตัว อย่างบางคนมองว่าสวยในขณะอีกคนกลับมองต่างว่าไม่สวย ซึ่งเป็นเรื่องยากที่ใครคนใดคนหนึ่งจะผูกขาดกับคำๆ นั้น </p>
+     </div>
+    </div>
+     <div class="col-sm-4">
+     <div class="about_3">
+      <h1 class="text-center">สมุนไพรไทยเพื่อความงาม</h1>
+      <a href="http://"><h3 class="text-center">ขมิ้นชัน</h3></a>
+      <h6 class="text-center">3.10.2022</h6>
+      <p class="text-center">ในอดีตมักจะใช้ขมิ้นขัดผิวให้ผิวขาวเนียน นั่นก็เพราะขมิ้นมีสารเคอร์คิวมินที่เป็นสารฆ่าเชื้อแบคทีเรีย รักษาโรคผิวหนังบางชนิด ทั้งยังช่วยให้ผิวผ่องใส </p>
+     </div>
+     <div class="about_3">
+      <a href="http://"><h3 class="text-center">ว่านหางจระเข้</h3></a>
+      <h6 class="text-center">3.10.2022</h6>
+      <p class="text-center">มุนไพรช่วยให้สวยอันดับต้น ๆ ที่หาง่าย ใช้ดี อย่างว่านหางจระเข้ มีสรรพคุณช่วยลดการติดเชื้อ ฆ่าเชื้อ สมานแผล และยังมีส่วนกระตุ้นเซลล์เนื้อเยื่อให้เจริญเติบโต ช่วยผลัดเซลล์ใหม่ และทำให้แผลหายเร็วขึ้น ด้วยสรรพคุณนี้เราจึงเห็นว่านหางจระเข้เป็นส่วนผสมในเวชสำอางและสกินแคร์หลายชนิด</p>
+     </div>
+     <div class="about_3">
+      <a href="http://"><h3 class="text-center">บัวบก</h3></a>
+      <h6 class="text-center">3.10.2022</h6>
+      <p class="text-center">ในใบบัวบกยังมีสารที่ช่วยกระตุ้นการสร้างคอลลาเจนและอีลาสตินในร่างกาย ช่วยให้ผิวพรรณดูอ่อนกว่าวัย ลบรอยตีนกา อีกทั้งใบบัวบกยังเป็นหนึ่งในสมุนไพรบำรุงผมให้ดกดำ แก้ผมหงอก โดยนำน้ำใบบัวบกคั้นสดมาหมักผมทิ้งไว้ 20 นาที เป็นประจำ ผมก็จะดำขลับ ดูสวย
+      </p>
+     </div>
+    </div>
+     <div class="col-sm-4">
+     <div class="about_4">
+      <h1 class="text-center">HEALTHY</h1>
+      <a href="http://"><h3 class="text-center">การดูแลสุขภาพ</h3></a>
+      <p>สุขภาพก็มาคู่กับความงามมีความงามก็ต้องมีสุขภาพที่ดีแนะนำเว็บไซต์เพื่อดูแลสุขภาพที่ใช้อ้างอิงในการทำเว็บไซต์OHHERB</p>
+     </div>
+     <div class="about_5">
+         <ul>
+          <li><i class="fa fa-check"></i><a href="Bangkokpattayahospital.com">Bangkokpattayahospital</a></li>
+          <li><i class="fa fa-check"></i><a href="www.sanook.com">sanook </a></li>
+          <li><i class="fa fa-check"></i><a href="helenathailand.co">helenathailand</a></li>
+          <li><i class="fa fa-check"></i><a href="www.amara-clinic.com">amara-clinic</a></li>
+          <li><i class="fa fa-check"></i><a href="www.phyteneyth.com">phyteneyth</a></li>
+          <li><i class="fa fa-check"></i><a href="teepadungsak.medium.com">teepadungsak.medium</a></li>
+          <li><i class="fa fa-check"></i><a href="www.nestle.co.th">nestle </a></li>
+          <li><i class="fa fa-check"></i><a href="www.apexprofoundbeauty.com">apexprofoundbeauty</a></li>
+          <li><i class="fa fa-check"></i><a href="www.doctorraksa.com">doctorraksa</a></li>
+          <li><i class="fa fa-check"></i><a href="https://www.wongnai.com/articles/ketogenic-diet?ref=ct">wongnai</a></li>
+       </ul>
+     </div>
+    </div>
+    </div>
+     </div>
+    </div>
+   </div>
+  </section> 
+  <% });%>
+  <% data.beautys.forEach(function(beautys){ %>
+  <section id="team">
+   <div class="container">
+    <div class="row">
+     <div class="col-sm-12">
+      <div class="team_main clearfix">
+     <div class="team_1">
+     <h2 class="text-center">บิวตี้บล็อกเกอร์</h2>
+    </div>
+     <div class="col-sm-3">
+     <div class="team_2">
+      <div class="ih-item circle effect20 bottom_to_top"><a href="https://www.instagram.com/best.dressed/">
+      <div class="img"><img src="<%= beautys.URL1 %>" width="100%" alt="img"></div>
+      <div class="info">
+      <div class="info-back">
+        <h3>Ashley</h3>
+        <p> @best.dressed</p>
+      </div>
+      </div></a></div>
+      <h4 class="text-center"><a href="https://www.instagram.com/best.dressed/">Ashley / @best.dressed</a></h4>
+      <p class="text-center">  Ashley เป็นคนควรฟอลโล่เพราะเธอมีทั้งมุมบิวตี้ แฟชั่น และไลฟ์สไตล์ในชีวิตประจำวันมาอัพเดทให้กันดูบ่อยๆ ผ่านช่องยูทูปและอินสตาแกรม</p>
+     </div>
+    </div>
+     <div class="col-sm-3">
+     <div class="team_2">
+      <div class="ih-item circle effect20 bottom_to_top"><a href="https://www.instagram.com/morethansurface/?hl=th">
+      <div class="img"><img src="<%= beautys.URL2 %>" alt="img"></div>
+      <div class="info">
+      <div class="info-back">
+         <h3>Chompoo</h3>
+        <p>@morethansurface</p>
+      </div>
+      </div></a></div>
+       <h4 class="text-center"><a href="https://www.instagram.com/morethansurface/?hl=th">Chompoo / @morethansurface</a></h4>
+      <p class="text-center">จุดเริ่มต้นและความชอบในเรื่องของสกินแคร์ที่ทำให้เธอก่อตั้งไอจีนี้ขึ้น ปัจจุบัน More Than Surface ได้กลายเป็นแหล่งรวมข้อมูลของสกินแคร์มากมาย</p>
+     </div>
+    </div>
+     <div class="col-sm-3">
+     <div class="team_2">
+      <div class="ih-item circle effect20 bottom_to_top"><a href="https://www.instagram.com/ireneisgood/">
+      <div class="img"><img src="<%= beautys.URL3 %>" alt="img"></div>
+      <div class="info">
+      <div class="info-back">
+       <h3>Irene</h3>
+        <p> @ireneisgood</p>
+      </div>
+      </div></a></div>
+       <h4 class="text-center"><a href="https://www.instagram.com/ireneisgood/">Irene / @ireneisgood</a></h4>
+        <p class="text-center">Irene เป็นสาย(แฟ) และ Irene ยังมีเรื่องของบิวตี้และไลฟ์สไตล์มาคอยอัพเดทกันบ่อยๆ ด้วย</p>
+     </div>
+    </div>
+     <div class="col-sm-3">
+     <div class="team_2">
+      <div class="ih-item circle effect20 bottom_to_top"><a href="https://www.instagram.com/mossster_/">
+      <div class="img"><img src="<%= beautys.URL4 %>" alt="img"></div>
+      <div class="info">
+      <div class="info-back">
+        <h3>Mos</h3>
+        <p>@mossster_</p>
+      </div>
+      </div></a></div>
+       <h4 class="text-center"><a href="https://www.instagram.com/mossster_/">Mos / @mossster_</a></h4>
+      <p class="text-center">มีทิปส์วิดีโอสาธิตการครีเอตลุคเมกอัพหลากหลายแนวให้ดูกันแบบแน่นๆ นอกจากนี้ยังเป็นแหล่งรวมข้อมูลสกินแคร์น่าใช้ด้วย</p>
+     </div>
+    </div>
+    </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <% });%>
+  <section id="semper">
+   <div class="container">
+    <div class="row">
+     <div class="col-sm-12">
+      <div class="col-sm-4">
+     <div class="semper_1">
+      <h2 class="text-center">แนะนำ3เคล็ดลับความงาม</h2>
+     </div>
+     <div class="col-sm-12 padding_all">
+      <div class="col-sm-2 left_1 padding_all">
+       <div class="semper_2">
+        <p class="text-center">1.</p>
+       </div>
+      </div>
+      <div class="col-sm-10 padding_all">
+       <div class="semper_3">
+        <p>ใช้ครีมกันแดดที่มีค่า SPF และเมื่ออยู่กลางแจ้งก็ควรจะสวมหมวก</p>
+       </div>
+      </div>
+     </div>
+     <div class="col-sm-12 padding_all">
+      <div class="col-sm-2 left_1 padding_all">
+       <div class="semper_2">
+        <p class="text-center">2.</p>
+       </div>
+      </div>
+      <div class="col-sm-10 padding_all">
+       <div class="semper_3">
+         <p>ใช้เวลากับคนที่คุณไว้ใจอย่างมีความสุข และเรียนรู้ที่จะรักตัวเอง</p>
+       </div>
+      </div>
+     </div>
+     <div class="col-sm-12 padding_all">
+      <div class="col-sm-2 left_1 padding_all">
+       <div class="semper_2">
+        <p class="text-center">3.</p>
+       </div>
+      </div>
+      <div class="col-sm-10 padding_all">
+       <div class="semper_3">
+         <p>ค้นหาลุคแต่งหน้าที่เข้ากับเรา และมั่นใจเข้าไว้</p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-sm-4">
+     <div class="semper_1">
+      <h2 class="text-center">BEAUTIES</h2>
+     </div>
+     <div class="semper_4">
+      <h3>เว็บไซต์เพื่อความงาม</h3>
+      <p>เราได้มีการรวบรวมเพื่อแนะนำเว็บไซต์เพื่อความงามที่ใช้ในการสร้างเว็บไซต์OHHERBSไว้ให้คุณที่นี่</p>
+     </div>
+     <div class="about_5">
+         <ul>
+            <li><i class="fa fa-check"></i><a href="Bangkokpattayahospital.com">Bangkokpattayahospital</a></li>
+         <li><i class="fa fa-check"></i><a href="www.sanook.com">sanook </a></li>
+         <li><i class="fa fa-check"></i><a href="helenathailand.co">helenathailand</a></li>
+         <li><i class="fa fa-check"></i><a href="www.amara-clinic.com">amara-clinic</a></li>
+         <li><i class="fa fa-check"></i><a href="www.phyteneyth.com">phyteneyth</a></li>
+         <li><i class="fa fa-check"></i><a href="teepadungsak.medium.com">teepadungsak.medium</a></li>
+         <li><i class="fa fa-check"></i><a href="www.nestle.co.th">nestle </a></li>
+         <li><i class="fa fa-check"></i><a href="www.apexprofoundbeauty.com">apexprofoundbeauty</a></li>
+         <li><i class="fa fa-check"></i><a href="beautyaddict.blogspot.com">beautyaddict.blogspot</a></li>
+         <li><i class="fa fa-check"></i><a href="https://goodlifeupdate.com/">goodlifeupdate</a></li>
+         <li><i class="fa fa-check"></i><a href="https://sistacafe.com/">sistacafe</a></li>
+       </ul>
+     </div>
+    </div>
+    <div class="col-sm-4">
+     <div class="semper_1">
+      <h2 class="text-center">ABOUT OHHERBS</h2>
+     </div>
+     <div class="semper_5">
+      <p class="text-center"><i class="fa fa-quote-left"></i></p>
+      <h5 class="text-center">เรามีสมุนไพรมากมายให้คุณได้เลือกชมและค้นหาสิ่งที่คุณต้องการ </h5>
+     </div>
+     <div class="semper_6">
+      <p class="text-center"><a href="#">ALLHERBS</a></p>
+     </div>
+     <div class="semper_5">
+      <p class="text-center"><i class="fa fa-quote-left"></i></p>
+      <h5 class="text-center">และยังมี สินค้าOTOP จากภูมิปัญญาชาวบ้านให้คุณได้เลือกซื้ออีกด้วยมีทั้งสินค้าเพื่อสุขภาพและความงามช่วยสนับสนุนสินค้าไทยได้ที่นี่ </h5>
+     </div>
+     <div class="semper_6">
+      <p class="text-center"><a href="#">OTOP</a></p>
+     </div>
+    </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  </section>
+  <section id="store">
+ <div class="container">
+  <div class="row">
+   <div class="store_main clearfix">
+     <div class="col-sm-12">
+    <div class="store_1"><h1 class="text-center">Contact us</h1></div>
+   </div>
+     <div class="col-sm-12">
+    <div class="col-sm-3 left_1">
+	 <div class="store_2">
+	 <h5>REFERENCES</h5>
+	  <ul>
+	      <li><a href="www.sanook.com">sanook</a></li>
+		  <li><a href="helenathailand.co">helenathailand </a></li>
+		  <li><a href="www.amara-clinic.com">amara-clinic</a></li>
+		  <li><a href="www.phyteneyth.com">phyteneyth</a></li>
+	  </ul>
+	</div>
+	</div>
+	<div class="col-sm-3 left_1">
+	 <div class="store_2">
+	 <h5>REFERENCES</h5>
+	  <ul>
+	      <li><a href="teepadungsak.medium.com">teepadungsak</a></li>
+		  <li><a href="www.nestle.co.th">nestle</a></li>
+		  <li><a href="www.apexprofoundbeauty.com">apexprofoundbeauty</a></li>
+		  <li><a href="medthai.com">medthai </a></li>
+	  </ul>
+	</div>
+	</div>
+	<div class="col-sm-3 left_1">
+	 <div class="store_2">
+	 <h5>CONTACT</h5>
+	  <ul>
+	      <li>+66 234 567 8901</li>
+		  <li>VA 32101, USA</li>
+		  <li><a href="https://outlook.live.com/owa/">hibarithecloudgruad@gmail.com</a></li>
+	  </ul>
+	</div>
+	</div>
+	<div class="col-sm-3 left_1">
+	 <div class="store_2">
+	 <h5>LOCATION</h5>
+	  <ul>
+	      <li> Class aptent taciti. -sociosqu</li>
+		  <li>Sed dignissim lacinia -</li>
+		  <li>1.20PM</li>
+	  </ul>
+	</div>
+	</div>
+   </div>
+   </div>
+  </div>
+ </div>
+</section>
+   <section id="footer_main">
+    <div class="container">
+     <div class="row">
+      <div class="col-sm-12">
+       <div class="footer_main_1">
+      <p class="text-center">© 2022 Your Website Name. All Rights Reserved. Design by<a href="http://www.TemplateOnWeb"> Template On Web</a> </p>
+     </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+  </body>
+</html>

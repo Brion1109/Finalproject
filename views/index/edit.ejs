@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' />
+<link rel='stylesheet' href='/stylesheets/useredit.css' />
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+                    src="<%= user.img %>"><span
+                    class="font-weight-bold"><%= user.username %></span><span class="text-black-50"><%= user.email %></</span><span>
+                </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <form action="/user/<%= user._id %>?_method=PUT" method="POST" autocomplete="off">
+			<input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+                <div class="row mt-2">
+                        <div class="col-md-12"><label class="labels">รูป</label><input type="text"
+                                class="form-control" placeholder=".ใส่ลิ้งค์รูปภาพ" value="<%= user.img %>"></div>
+                    <div class="col-md-6"><label class="labels">ชื่อ</label><input type="text" class="form-control"
+                            placeholder="ชื่อ" value="<%= user.firstname %>"></div>
+                    <div class="col-md-6"><label class="labels">นามสกุล</label><input type="text" class="form-control"
+                            value="<%= user.surname %>" placeholder="นามสกุล"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">เบอร์โทรศัพท์</label><input type="text"
+                            class="form-control" placeholder="เบอร์โทรศัพท์" value="<%= user.phonenumber %>"></div>
+                    <div class="col-md-12"><label class="labels">ที่อยู่จัดส่ง</label><input type="text" class="form-control"
+                            placeholder="ที่อยู่" value="<%= user.address %>"></div>
+                    <div class="col-md-12"><label class="labels">อีเมล</label><input type="text" class="form-control"
+                            placeholder="enter email id" value="<%= user.email %>"></div>
+                    <div class="col-md-12"><label class="labels">ติดต่อฉุกเฉิน</label><input type="text"
+                            class="form-control" placeholder="ติดต่อฉุกเฉิน" value="<%= user.sos %>"></div>
+                
+                        </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">ประเทศ</label><input type="text" class="form-control"
+                            placeholder="ประเทศไทย" value="<%= user.country %>"></div>
+                    <div class="col-md-6"><label class="labels">เมือง</label><input type="text"
+                            class="form-control" value="<%= user.state %>" placeholder="เมือง"></div>
+                </div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save
+                        Profile</button></div>
+                </form>
+                </div>
+        
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+</div>

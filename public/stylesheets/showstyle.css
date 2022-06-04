@@ -1,0 +1,128 @@
+/* Designed by www.Templatesperfect.com */
+body {
+	margin: 0;
+	padding: 0;
+	background: #212b02 url(/ohherbs/public/images/bg.jpg) no-repeat center top ;
+	text-align: justify;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #fff2d6;
+}
+
+h2 {
+	font-size: 22px;
+	display:inline;
+	
+}
+
+h3{
+	font-size: 17px;
+	color:#ffe401;
+	display:inline;
+}
+h4 {
+	font-size: 14px;
+	color:#ffffff;
+}
+
+p, ol, ul {
+	line-height: 20px;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+ul li {
+	padding: 2px 0 5px 0;
+	border-bottom:1px dotted #444444;;
+}
+
+
+img {
+	float: left;
+	margin:8px;
+	border:2px solid #cccccc;
+}
+
+#wrapper {
+	width: 820px;margin: 0 auto;
+	
+}
+
+#header {
+	width: 800px;
+	height: 220px;
+	margin: 0 0 0 0;
+}
+h1
+{ margin-top:40px;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color:#c5fc08;
+	font-size: 38px;
+	text-decoration:none;
+	line-height:38px;}
+
+h1 a { color:#c5fc08;
+	text-decoration:none;
+	}
+h1 a:hover { color:#ffffff;
+	text-decoration:none;
+}
+#menu
+{ height:45px; opacity:.80;filter: alpha(opacity=80); -moz-opacity: 0.8; margin-top:55px;}
+
+.toplinks
+{ 
+  width:80px;
+  text-align:center;
+  float:right; height:35px;
+  line-height:35px;
+  font-family:tahoma;
+  font-size:13px;
+  font-weight:bold;
+  background-color:#f9ae0e;
+  display:block;
+  margin:5px 0 0 3px;
+  border:1px solid #993300;
+  color:#000000;
+  text-decoration:none;
+ 
+ }
+
+ 
+.toplinks:hover
+{ color:#ffffff; background-color:#ff7700;
+
+ }
+
+#left {
+	float: right;
+	width: 600px;
+	
+}
+
+#right {
+	float: left;
+	width: 200px;
+}
+
+#footer {
+	clear: both;
+	width: 820px;
+	margin: 20px auto;
+	padding: 20px 0;
+	border-top:2px solid #c5fc08;
+	text-align:right;
+}
+
+a {
+	color: #438403;
+}
+
+a:hover {
+	text-decoration: none;
+	color:#FFFF66;
+}

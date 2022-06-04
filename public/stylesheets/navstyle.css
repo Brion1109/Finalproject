@@ -1,0 +1,52 @@
+h1 {
+    color: rgb(255, 255, 255);
+  }
+  
+  .p {
+    color:white;
+  }
+  
+  .wrap {
+    padding:45px;
+    text-align: center;
+    background-color: #515353;
+  }
+  
+  .wrap a {
+    color: rgb(87, 86, 86);
+  }
+  
+  .hover-fx {
+    width:250px;
+    height:500px;
+    background:none;
+    border:none solid;
+    cursor:pointer;
+  }
+  
+  .hover-fx:after {
+    width:250px;
+    height:500px;
+    background:#595a5a;
+      border:none 10px solid;  
+  }
+  
+  .hover-fx:hover {
+    background-color: rgb(152, 240, 37);
+    color: #595a5a;
+    border: rgb(152, 240, 37) 7px solid; 
+  }
+  
+  .hover-fx:hover:after {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  .affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
